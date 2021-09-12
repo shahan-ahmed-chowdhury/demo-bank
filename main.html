@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-green-100">
+        <h1 class="text-5xl font-thin text-center my-5 p-4">Banking Section</h1>
+    </header>
+    <main>
+        <section>
+            <div class="grid lg:grid-cols-3 gap-4">
+                <div class="bg-green-500 p-8 rounded-lg">
+                    <h2 class="text-2xl text-yellow-300 text-center">Deposit</h2>
+                    <h3 class="text-4xl text-white text-center">$<span id="deposit-count">00</span></h3>
+                </div>
+                <div class="bg-red-500 p-8 rounded-lg">
+                    <h2 class="text-2xl text-white text-center">Withdraw</h2>
+                    <h3 class="text-4xl text-white text-center">$<span  id="withdraw-count">00</span></h3>
+                </div>
+                <div class="bg-yellow-600 p-8 rounded-lg">
+                    <h2 class="text-2xl text-purple-800 text-center">Balance</h2>
+                    <h3 class="text-4xl text-white text-center">$<span  id="total-count">1240</span></h3>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-2 mt-4">
+                <div class="bg-green-500">
+                    <h2 class="text-4xl text-center text-white p-4">Deposit</h2>
+                    <div class="bg-green-300 text-center p-14">
+                        <input id="deposit-input" type="text" placeholder="$Deposit amount" class="p-3 mb-4 w-2/3 
+                        border border-gray-600 rounded-full focus:outline-none focus:ring focus:border-blue-300">
+                        <button id="deposit-btn" class="rounded-full py-3 px-20 mt-4 bg-green-500 text-xl font-extralight text-black">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-red-500">
+                    <h2 class="text-4xl text-center text-white p-4">Withdraw</h2>
+                    <div class="bg-red-300 text-center p-14">
+                        <input id="withdraw-input" type="text" placeholder="$Withdraw amount" class="p-3 mb-4 w-2/3 
+                        border border-gray-600 rounded-full focus:outline-none focus:ring focus:border-blue-300">
+                        <button id="withdraw-btn" class="rounded-full py-3 px-20 mt-4 bg-red-500 text-xl font-extralight text-black">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="bank.js"></script>
+</body>
+</html>
